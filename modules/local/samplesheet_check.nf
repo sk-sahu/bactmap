@@ -13,7 +13,7 @@ process SAMPLESHEET_CHECK {
         saveAs: { filename -> saveFiles(filename:filename, options:params.options, publish_dir:'pipeline_info', publish_id:'') }
 
     conda     (params.enable_conda ? "conda-forge::python=3.8.3" : null)
-    container "biocontainers/python:3.9--1"
+    container "quay.io/biocontainers/python:3.8.3"
 
     input:
     path samplesheet
